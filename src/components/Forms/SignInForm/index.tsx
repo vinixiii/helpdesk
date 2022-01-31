@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
+import { Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
 
 import { FooterButton } from '@components/Controllers/FooterButton';
 import { Button } from '@components/Controllers/Button';
@@ -15,6 +17,15 @@ export function SignInForm() {
 
   function handleSignIn() {
     setIsLoading(true);
+
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => Alert.alert('Logado com sucesso!'))
+      .catch((error) => {
+        console.error(error.message);
+        Alert.alert('Oops!', 'Ocorreu um erro ao fazer o login. Tente novamente.');
+      })
+      .finally(() => setIsLoading(false));
   }
 
   function handleForgotPassword() {
