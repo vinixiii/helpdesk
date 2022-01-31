@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1008247696833",
+    "project_id": "helpdesk-fee90",
+    "storage_bucket": "helpdesk-fee90.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1008247696833:android:b0a257421028ba70bb5340",
+        "android_client_info": {
+          "package_name": "com.helpdesk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1008247696833-so6a58pf8a6ar56ous3v0evvdh0eet10.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMpMa146AHD2hLjKRAP8LZd2tCWQW7EAM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1008247696833-so6a58pf8a6ar56ous3v0evvdh0eet10.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
