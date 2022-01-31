@@ -29,7 +29,14 @@ export function SignInForm() {
   }
 
   function handleForgotPassword() {
-
+    auth()
+      .sendPasswordResetEmail(email)
+      .then(() => Alert.alert('Recuperação de senha', 'Enviamos um email para você com instruções para recuperar sua senha.'))
+      .catch((error) => {
+        console.error(error.message);
+        Alert.alert('Oops!', 'Ocorreu um erro ao tentar recuperar sua senha. Tente novamente.');
+      })
+      .finally(() => setIsLoading(false));
   }
 
   return (
